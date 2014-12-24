@@ -19,7 +19,7 @@ sudo aptitude install fonts-arphic-uming language-pack-gnome-zh-hans-base langua
 			language-pack-zh-hans language-pack-gnome-zh-hans language-pack-gnome-zh-hant-base \
 			language-pack-zh-hant-base language-pack-zh-hant language-pack-gnome-zh-hant \
 			libchewing3-data libchewing3 ibus-chewing ttf-wqy-zenhei ttf-arphic-ukai fonts-arphic-ukai
-
+#font locale
 sudo aptitude install libreoffice-l10n-en-za language-pack-kde-en thunderbird-locale-en-gb \
 	libreoffice-help-en-gb hunspell-en-ca mythes-en-au kde-l10n-engb gimp-help-en \
 	libreoffice-l10n-en-gb
@@ -30,8 +30,10 @@ sudo aptitude install freeglut3-dev build-essential libx11-dev libxmu-dev \
   libxi-dev libglu1-mesa libglu1-mesa-dev
 #libgl1-mesa-glx
 #
-sudo aptitude install vim kate git-core gitk samba system-config-samba gimp vlc guvcview krdc freerdp-x11\
-	xrdp grdesktop meld kscope kcachegrind gdebi gtk-recordmydesktop kfind p7zip-full p7zip-rar rar unrar \
+sudo aptitude install vim kate git-core gitk samba system-config-samba gimp \
+	vlc guvcview krdc freerdp-x11 xrdp grdesktop meld kscope kcachegrind \
+	gdebi gtk-recordmydesktop kfind p7zip-full p7zip-rar rar unrar
+sudo aptitude install vim-gnome vim-gtk jedit emacs lyx
 #openCV
 sudo aptitude install ant libavformat-dev libswscale-dev libgtk2.0-dev libgtk-3-0 libgtk-3-dev \
   libjpeg-dev libpng-dev libtiff-dev libjasper-dev libgtkgl2.0-dev libgtkglext1 libgtkglext1-dev \
@@ -72,7 +74,7 @@ sudo add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -
 sudo aptitude update
 sudo aptitude install acroread fbreader
 #latex
-sudo aptitude install kile
+sudo aptitude install kile okular
 #xubuntu
 #xubuntu-restricted-extras
 sudo aptitude install xubuntu-desktop  xubuntu-default-settings xubuntu-icon-theme
