@@ -40,9 +40,10 @@ sudo aptitude install ant libavformat-dev libswscale-dev libgtk2.0-dev libgtk-3-
   libgst-dev libgstreamer0.10-dev libgstreamermm-0.10-2 libgstreamer-plugins-base0.10-dev \
   libv4l-dev libbz2-dev doxygen libumlib-dev matlab-support-dev libghc-gtkglext-dev libghc6-gtkglext-dev\
   libghc-gtkglext-doc libghc-gtkglext-prof libgtkglextmm-x11-1.2-dev python-gtkglext1 \
-  libgdal1-dev python-gdal gdal-bin autoconf
+  libgdal1-dev python-gdal gdal-bin autoconf autoconf2.13 ccache
 
 sudo aptitude install kwalletmanager maxima wxmaxima xmaxima
+
 #python2
 sudo aptitude install python python-all python-numpy python-scientific python-tables \
 	python-scipy python-matplotlib python-scitools python-mpmath python-doc \
@@ -155,5 +156,10 @@ sudo aptitude install boost
 sudo add-apt-repository ppa:comp-phys/stable
 sudo aptitude update
 sudo aptitude install armadillo
+
+#QT 5
+sudo apt-add-repository ppa:ubuntu-sdk-team/ppa
+sudo aptitude update
+#sudo aptitude install qtdeclarative5-dev
 
 
