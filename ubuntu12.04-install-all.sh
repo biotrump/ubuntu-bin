@@ -71,7 +71,7 @@ sudo pip install Pillow
 
 ############################################
 #acrobat, ebook reader
-sudo add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
+sudo add-apt-repository -y "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
 sudo aptitude -y update
 sudo aptitude -y install acroread fbreader
 #latex
@@ -90,7 +90,7 @@ sudo aptitude -y install git gnupg flex bison gperf build-essential \
 #=======================
 #ppa
 #=======================
-sudo add-apt-repository ppa:yannubuntu/boot-repair
+sudo add-apt-repository -y ppa:yannubuntu/boot-repair
 #sudo apt-get update
 sudo aptitude -y update
 sudo aptitude -y install boot-repair
@@ -98,13 +98,13 @@ sudo aptitude -y install boot-repair
 #wine
 #deb http://ppa.launchpad.net/ubuntu-wine/ppa/ubuntu YOUR_UBUNTU_VERSION_HERE main
 #deb-src http://ppa.launchpad.net/ubuntu-wine/ppa/ubuntu YOUR_UBUNTU_VERSION_HERE main
-sudo add-apt-repository ppa:ubuntu-wine/ppa
+sudo add-apt-repository -y ppa:ubuntu-wine/ppa
 sudo aptitude -y update
 sudo aptitude -y install wine
 
 #
 #sudo aptitude -y install gummy
-sudo add-apt-repository ppa:gummi/gummi
+sudo add-apt-repository -y ppa:gummi/gummi
 sudo aptitude -y update
 sudo aptitude -y install gummi
 
@@ -116,12 +116,12 @@ sudo aptitude -y install texlive texlive-fonts-extras
 #cmake
 #deb http://ppa.launchpad.net/kalakris/cmake/ubuntu precise main
 #deb-src http://ppa.launchpad.net/kalakris/cmake/ubuntu precise main
-sudo add-apt-repository ppa:kalakris/cmake
+sudo add-apt-repository -y ppa:kalakris/cmake
 sudo aptitude -y update
 sudo aptitude -y install cmake cmake-gui
 
 #chewing daily build ppa
-sudo add-apt-repository ppa:chewing/chewing
+sudo add-apt-repository -y ppa:chewing/chewing
 sudo aptitude -y update
 sudo aptitude -y install chewing-editor libchewing scim-chewing
 
@@ -131,29 +131,29 @@ sudo aptitude -y install chewing-editor libchewing scim-chewing
 #python3-matplotlib
 #deb http://ppa.launchpad.net/takluyver/python3/ubuntu precise main
 #deb-src http://ppa.launchpad.net/takluyver/python3/ubuntu precise main
-sudo add-apt-repository ppa:takluyver/python3
+sudo add-apt-repository -y ppa:takluyver/python3
 sudo aptitude -y update
 sudo aptitude -y install python3-matplotlib
 
 #octave
-sudo add-apt-repository ppa:octave/stable
+sudo add-apt-repository -y ppa:octave/stable
 sudo aptitude -y update
 sudo aptitude -y install octave
 
 #eigen
 #deb http://ppa.launchpad.net/kalakris/eigen/ubuntu precise main
 #deb-src http://ppa.launchpad.net/kalakris/eigen/ubuntu precise main
-sudo add-apt-repository ppa:kalakris/eigen
+sudo add-apt-repository -y ppa:kalakris/eigen
 sudo aptitude -y update
 sudo aptitude -y install libeigen3-dev libeigen3-dev:i386 libeigen3-doc
 
 #Boost C++
-sudo add-apt-repository ppa:boost-latest/ppa
+sudo add-apt-repository -y ppa:boost-latest/ppa
 sudo aptitude -y update
 sudo aptitude -y install boost
 
 #armadillo
-sudo add-apt-repository ppa:comp-phys/stable
+sudo add-apt-repository -y ppa:comp-phys/stable
 sudo aptitude -y update
 sudo aptitude -y install armadillo
 
