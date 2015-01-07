@@ -150,7 +150,8 @@ sudo aptitude -y install libeigen3-dev libeigen3-dev:i386 libeigen3-doc
 #Boost C++
 sudo add-apt-repository -y ppa:boost-latest/ppa
 sudo aptitude -y update
-sudo aptitude -y install boost
+sudo aptitude -y install boost libboost_serialization1.55-dev libboost_filesystem1.55-dev \
+libboost_thread.1.55-dev
 
 #armadillo
 sudo add-apt-repository -y ppa:comp-phys/stable
