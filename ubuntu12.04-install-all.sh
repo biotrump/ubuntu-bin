@@ -45,11 +45,11 @@ sudo aptitude -y install ant libavformat-dev libswscale-dev libgtk2.0-dev libgtk
 sudo aptitude -y install kwalletmanager maxima wxmaxima xmaxima
 
 #python2
-sudo aptitude -y install python python-all python-numpy python-scientific python-tables \
+sudo aptitude -y install python  python-dev python-all python-numpy python-scientific python-tables \
 	python-scipy python-matplotlib python-scitools python-mpmath python-doc \
 	python-imaging-tk python-examples python-sphinx python-setuptools
 #python3
-sudo aptitude -y install python3 python3-all python3-numpy python3-scipy  python3-doc \
+sudo aptitude -y install python3 python3-dev python3-all python3-numpy python3-scipy  python3-doc \
 	python3-examples python3-sphinx python3-setuptools
 #Pillow
 sudo aptitude -y install libtiff4-dev libjpeg-dev libjpeg8-dev zlib1g-dev \
