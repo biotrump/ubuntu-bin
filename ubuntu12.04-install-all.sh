@@ -11,7 +11,7 @@ sudo /usr/bin/software-properties-gtk
 #deb http://us.archive.ubuntu.com/ubuntu/ precise main restricted
 #deb-src http://us.archive.ubuntu.com/ubuntu/ precise main restricted
 
-sudo apt-get install aptitude -y
+sudo apt-get -y install aptitude
 sudo aptitude -y install synaptic
 #locale and ime, refer to /var/log/dpkg.log
 #!!!please select the main server from update manager or synpatic!!!
@@ -109,7 +109,7 @@ sudo aptitude -y update
 sudo aptitude -y install gummi
 
 #pgfplots
-sudo apt-add-repository ppa:texlive-backports/ppa
+sudo apt-add-repository -y ppa:texlive-backports/ppa
 sudo aptitude -y update
 sudo aptitude -y install texlive texlive-fonts-extras
 
@@ -159,7 +159,7 @@ sudo aptitude -y update
 sudo aptitude -y install armadillo
 
 #QT 5
-sudo apt-add-repository ppa:ubuntu-sdk-team/ppa
+sudo apt-add-repository -y ppa:ubuntu-sdk-team/ppa
 sudo aptitude -y update
 #sudo aptitude -y install qtdeclarative5-dev
 
