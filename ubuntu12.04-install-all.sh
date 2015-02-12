@@ -40,7 +40,7 @@ sudo aptitude -y install ant libavformat-dev libswscale-dev libgtk2.0-dev libgtk
   libgst-dev libgstreamer0.10-dev libgstreamermm-0.10-2 libgstreamer-plugins-base0.10-dev \
   libv4l-dev libbz2-dev doxygen libumlib-dev matlab-support-dev libghc-gtkglext-dev libghc6-gtkglext-dev\
   libghc-gtkglext-doc libghc-gtkglext-prof libgtkglextmm-x11-1.2-dev python-gtkglext1 \
-  libgdal1-dev python-gdal gdal-bin autoconf autoconf2.13 ccache
+  libgdal1-dev python-gdal gdal-bin autoconf ccache
 
 sudo aptitude -y install kwalletmanager maxima wxmaxima xmaxima cutecom minicom
 
