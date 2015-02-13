@@ -40,7 +40,7 @@ sudo aptitude -y install ant libavformat-dev libswscale-dev libgtk2.0-dev libgtk
   libgst-dev libgstreamer0.10-dev libgstreamermm-0.10-2 libgstreamer-plugins-base0.10-dev \
   libv4l-dev libbz2-dev doxygen libumlib-dev matlab-support-dev libghc-gtkglext-dev libghc6-gtkglext-dev\
   libghc-gtkglext-doc libghc-gtkglext-prof libgtkglextmm-x11-1.2-dev python-gtkglext1 \
-  libgdal1-dev python-gdal gdal-bin autoconf ccache
+  libgdal1-dev python-gdal gdal-bin autoconf autoconf-doc ccache
 
 sudo aptitude -y install kwalletmanager maxima wxmaxima xmaxima cutecom minicom
 
@@ -151,7 +151,7 @@ sudo aptitude -y install libeigen3-dev libeigen3-dev:i386 libeigen3-doc
 sudo add-apt-repository -y ppa:boost-latest/ppa
 sudo aptitude -y update
 sudo aptitude -y install boost libboost_serialization1.55-dev libboost_filesystem1.55-dev \
-libboost_thread.1.55-dev
+libboost_thread.1.55-dev libboost-program-options1.55-dev
 
 #armadillo
 sudo add-apt-repository -y ppa:comp-phys/stable
@@ -163,4 +163,9 @@ sudo apt-add-repository -y ppa:ubuntu-sdk-team/ppa
 sudo aptitude -y update
 #sudo aptitude -y install qtdeclarative5-dev
 
+#autoconf >=2.69 for ubuntu 12.04
+#https://launchpad.net/~dns/+archive/ubuntu/gnu/+build/3647209
+#sudo apt-add-repository -y ppa:costamagnagianfranco/autoconf
+#sudo aptitude -y update
+#sudo aptitude -y install autoconf
 
