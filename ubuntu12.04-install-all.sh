@@ -30,7 +30,7 @@ sudo aptitude -y install freeglut3-dev build-essential libx11-dev libxmu-dev \
   libxi-dev libglu1-mesa libglu1-mesa-dev
 #libgl1-mesa-glx
 #
-sudo aptitude -y install vim kate git-core gitk samba system-config-samba gimp \
+sudo aptitude -y install vim kate git-core gitk svn git-svn samba system-config-samba gimp \
 	vlc guvcview krdc freerdp-x11 xrdp grdesktop meld kscope kcachegrind \
 	gdebi gtk-recordmydesktop kfind p7zip-full p7zip-rar rar unrar lzop
 sudo aptitude -y install vim-gnome vim-gtk jedit emacs lyx
