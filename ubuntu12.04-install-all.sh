@@ -175,3 +175,7 @@ sudo aptitude -y install update-java
 #sudo aptitude -y update
 #sudo aptitude -y install autoconf
 
+#automake 1.14 for ubuntu12.04
+#http://packages.ubuntu.com/en/trusty/all/automake/download
+#
+
