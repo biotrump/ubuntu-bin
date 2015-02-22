@@ -37,7 +37,8 @@ sudo aptitude -y install freeglut3-dev build-essential libx11-dev libxmu-dev \
 #
 sudo aptitude -y install vim kate samba system-config-samba gimp \
 	vlc guvcview krdc freerdp-x11 xrdp grdesktop meld kscope kcachegrind \
-	gdebi gtk-recordmydesktop kfind p7zip-full p7zip-rar rar unrar lzop
+	gdebi gtk-recordmydesktop kfind p7zip-full p7zip-rar rar unrar lzop \
+	libwebkit-dev libwebkitgtk-dev  libwebkitgtk-3.0-dev
 sudo aptitude -y install vim-gnome vim-gtk jedit emacs lyx
 #openCV
 sudo aptitude -y install ant libavformat-dev libswscale-dev libgtk2.0-dev libgtk-3-0 libgtk-3-dev \
