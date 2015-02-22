@@ -13,6 +13,11 @@ sudo /usr/bin/software-properties-gtk
 
 sudo apt-get -y install aptitude
 sudo aptitude -y install synaptic
+#revision tool
+sudo aptitude -y install vim git-core gitk svn git-svn
+#git config --global user.name "thomas tsai"
+#git config --global user.email thomas@biotrump.com
+
 #locale and ime, refer to /var/log/dpkg.log
 #!!!please select the main server from update manager or synpatic!!!
 sudo aptitude -y install fonts-arphic-uming language-pack-gnome-zh-hans-base language-pack-zh-hans-base \
@@ -30,7 +35,7 @@ sudo aptitude -y install freeglut3-dev build-essential libx11-dev libxmu-dev \
   libxi-dev libglu1-mesa libglu1-mesa-dev
 #libgl1-mesa-glx
 #
-sudo aptitude -y install vim kate git-core gitk svn git-svn samba system-config-samba gimp \
+sudo aptitude -y install vim kate samba system-config-samba gimp \
 	vlc guvcview krdc freerdp-x11 xrdp grdesktop meld kscope kcachegrind \
 	gdebi gtk-recordmydesktop kfind p7zip-full p7zip-rar rar unrar lzop
 sudo aptitude -y install vim-gnome vim-gtk jedit emacs lyx
@@ -40,7 +45,7 @@ sudo aptitude -y install ant libavformat-dev libswscale-dev libgtk2.0-dev libgtk
   libgst-dev libgstreamer0.10-dev libgstreamermm-0.10-2 libgstreamer-plugins-base0.10-dev \
   libv4l-dev libbz2-dev doxygen libumlib-dev matlab-support-dev libghc-gtkglext-dev libghc6-gtkglext-dev\
   libghc-gtkglext-doc libghc-gtkglext-prof libgtkglextmm-x11-1.2-dev python-gtkglext1 \
-  libgdal1-dev python-gdal gdal-bin autoconf autoconf-doc ccache
+  libgdal1-dev python-gdal gdal-bin autoconf autoconf-doc libtool ccache
 
 sudo aptitude -y install kwalletmanager maxima wxmaxima xmaxima cutecom minicom
 
