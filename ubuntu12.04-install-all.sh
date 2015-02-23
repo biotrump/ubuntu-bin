@@ -184,4 +184,15 @@ sudo aptitude -y install update-java
 #automake 1.14 for ubuntu12.04
 #http://packages.ubuntu.com/en/trusty/all/automake/download
 #
-
+#android chromium_org webkit build necessary
+#https://code.google.com/p/chromium/wiki/AndroidBuildInstructions
+#sudo update-alternatives --config javac
+#sudo update-alternatives --config java
+#sudo update-alternatives --config javaws
+#sudo update-alternatives --config javap
+#sudo update-alternatives --config jar
+#sudo update-alternatives --config jarsigner
+#If you prefer to use Oracle Java JDK, you can follow the section Oracle JDK.
+#Install build dependencies
+#Update the system packages required to build by running:
+#~/chromium$ src/build/install-build-deps-android.sh 
