@@ -49,7 +49,7 @@ sudo aptitude -y install ant libavformat-dev libswscale-dev libgtk2.0-dev libgtk
   libgdal1-dev python-gdal gdal-bin autoconf autoconf-doc libtool ccache
 
 sudo aptitude -y install kwalletmanager maxima wxmaxima xmaxima cutecom \
-  minicom cpufrequtils
+  minicom cpufrequtils indicator-cpufreq
 
 #python2
 sudo aptitude -y install python  python-dev python-all python-numpy python-scientific python-tables \
