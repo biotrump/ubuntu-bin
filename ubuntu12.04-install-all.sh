@@ -49,7 +49,7 @@ sudo aptitude -y install ant libavformat-dev libswscale-dev libgtk2.0-dev libgtk
   libgdal1-dev python-gdal gdal-bin autoconf autoconf-doc libtool ccache
 
 sudo aptitude -y install kwalletmanager maxima wxmaxima xmaxima cutecom \
-  minicom cpufrequtils indicator-cpufreq
+  minicom cpufrequtils indicator-cpufreq sysfsutils
 
 #python2
 sudo aptitude -y install python  python-dev python-all python-numpy python-scientific python-tables \
@@ -93,6 +93,9 @@ sudo aptitude -y install git gnupg flex bison gperf build-essential \
   zip curl libc6-dev libncurses5-dev:i386 x11proto-core-dev \
   libx11-dev:i386 libreadline6-dev:i386 g++-multilib mingw32 tofrodos \
   python-markdown libxml2-utils xsltproc zlib1g-dev:i386 libgl1-mesa-dev
+#ATLAS, OpenBLAS
+#http://osdf.github.io/blog/numpyscipy-with-openblas-for-ubuntu-1204.html
+sudo aptitude -y install gfortran swig rcconf dialog
 #libgl1-mesa-glx:i386
 #=======================
 #ppa
