@@ -199,4 +199,17 @@ sudo aptitude -y install update-java
 #If you prefer to use Oracle Java JDK, you can follow the section Oracle JDK.
 #Install build dependencies
 #Update the system packages required to build by running:
-#~/chromium$ src/build/install-build-deps-android.sh 
+#~/chromium$ src/build/install-build-deps-android.sh
+
+#ubuntu 12.04 precise new gcc 4.7,4.8,4.9
+#https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/test?field.series_filter=precise
+#http://mortenvp.com/installing-a-newer-gccg-on-ubuntu-12-04-lts/
+sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
+sudo aptitude -y update
+sudo aptitude -y install gcc-4.9 g++-4.9 gcc-4.8 g++-4.8 gcc-4.7 g++-4.7
+update-alternatives --display gcc
+#change the default gcc
+$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 80 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9
+$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 70 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
+$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.7
+$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.6
