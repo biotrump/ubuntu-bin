@@ -206,10 +206,16 @@ sudo aptitude -y install update-java
 #http://mortenvp.com/installing-a-newer-gccg-on-ubuntu-12-04-lts/
 sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
 sudo aptitude -y update
-sudo aptitude -y install gcc-4.9 g++-4.9 gcc-4.8 g++-4.8 gcc-4.7 g++-4.7
-update-alternatives --display gcc
+sudo aptitude -y install gcc-4.9 g++-4.9 gcc-4.8 g++-4.8 gcc-4.7 g++-4.7 \
+	gfortran-4.9 gfortran-4.8 gfortran-4.7
+sudo update-alternatives --display gcc
 #change the default gcc
-$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 80 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9
-$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 70 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
-$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.7
-$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.6
+#sudo update-alternatives --config gcc
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 80 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 70 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.7
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.6
+sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.9 90
+sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.8 80
+sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.7 70
+sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.6 60
