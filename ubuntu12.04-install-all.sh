@@ -32,7 +32,7 @@ sudo aptitude -y install libreoffice-l10n-en-za language-pack-kde-en thunderbird
 # pyrit
 sudo aptitude -y install nvidia-opencl-dev nvidia-cuda-doc
 sudo aptitude -y install freeglut3-dev build-essential libx11-dev libxmu-dev \
-  libxi-dev libglu1-mesa libglu1-mesa-dev
+  libxi-dev libglu1-mesa libglu1-mesa-dev binutils-dev
 #libgl1-mesa-glx
 #
 sudo aptitude -y install vim kate samba system-config-samba gimp \
