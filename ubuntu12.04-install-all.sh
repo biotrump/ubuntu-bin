@@ -14,7 +14,7 @@ sudo /usr/bin/software-properties-gtk
 sudo apt-get -y install aptitude
 sudo aptitude -y install synaptic
 #revision tool
-sudo aptitude -y install vim git-core gitk svn git-svn
+sudo aptitude -y install vim git-core gitk svn git-svn ksh
 #git config --global user.name "thomas tsai"
 #git config --global user.email thomas@biotrump.com
 
@@ -119,7 +119,7 @@ sudo aptitude -y update
 sudo aptitude -y install gummi
 
 #pgfplots
-sudo apt-add-repository -y ppa:texlive-backports/ppa
+sudo add-apt-repository -y ppa:texlive-backports/ppa
 sudo aptitude -y update
 sudo aptitude -y install texlive texlive-fonts-extras
 
@@ -133,7 +133,8 @@ sudo aptitude -y install cmake cmake-gui
 #chewing daily build ppa
 sudo add-apt-repository -y ppa:chewing/chewing
 sudo aptitude -y update
-sudo aptitude -y install chewing-editor libchewing scim-chewing
+#chewing-editor
+sudo aptitude -y install libchewing scim-chewing
 
 #deb http://ppa.launchpad.net/chewing/chewing/ubuntu precise main
 #deb-src http://ppa.launchpad.net/chewing/chewing/ubuntu precise main
@@ -169,19 +170,19 @@ sudo aptitude -y update
 sudo aptitude -y install armadillo
 
 #QT 5
-sudo apt-add-repository -y ppa:ubuntu-sdk-team/ppa
+sudo add-apt-repository -y ppa:ubuntu-sdk-team/ppa
 sudo aptitude -y update
 #sudo aptitude -y install qtdeclarative5-dev
 
 #ppa:nilarimogard/webupd8
 #alternative to this is to use the webupd8 ppa and the update-java package.
-sudo apt-add-repository -y ppa:nilarimogard/webupd8
+sudo add-apt-repository -y ppa:nilarimogard/webupd8
 sudo aptitude -y update
 sudo aptitude -y install update-java
 
 #autoconf >=2.69 for ubuntu 12.04
 #https://launchpad.net/~dns/+archive/ubuntu/gnu/+build/3647209
-#sudo apt-add-repository -y ppa:costamagnagianfranco/autoconf
+#sudo add-apt-repository -y ppa:costamagnagianfranco/autoconf
 #sudo aptitude -y update
 #sudo aptitude -y install autoconf
 
@@ -204,7 +205,7 @@ sudo aptitude -y install update-java
 #ubuntu 12.04 precise new gcc 4.7,4.8,4.9
 #https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/test?field.series_filter=precise
 #http://mortenvp.com/installing-a-newer-gccg-on-ubuntu-12-04-lts/
-sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
+sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 sudo aptitude -y update
 sudo aptitude -y install gcc-4.9 g++-4.9 gcc-4.8 g++-4.8 gcc-4.7 g++-4.7 \
 	gfortran-4.9 gfortran-4.8 gfortran-4.7
