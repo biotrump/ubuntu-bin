@@ -14,7 +14,7 @@ sudo /usr/bin/software-properties-gtk
 sudo apt-get -y install aptitude
 sudo aptitude -y install synaptic
 #revision tool
-sudo aptitude -y install vim git-core gitk svn git-svn ksh
+sudo aptitude -y install vim git-core gitk svn git-svn ksh openjdk-7-jdk
 #git config --global user.name "thomas tsai"
 #git config --global user.email thomas@biotrump.com
 
