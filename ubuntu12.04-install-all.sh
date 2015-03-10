@@ -149,7 +149,7 @@ sudo aptitude -y install python3-matplotlib
 #octave
 sudo add-apt-repository -y ppa:octave/stable
 sudo aptitude -y update
-sudo aptitude -y install octave
+sudo aptitude -y install octave liboctave-dev
 
 #eigen
 #deb http://ppa.launchpad.net/kalakris/eigen/ubuntu precise main
