@@ -33,6 +33,7 @@ sudo aptitude -y install libreoffice-l10n-en-za language-pack-kde-en thunderbird
 sudo aptitude -y install nvidia-opencl-dev nvidia-cuda-doc
 sudo aptitude -y install freeglut3-dev build-essential libx11-dev libxmu-dev \
   libxi-dev libglu1-mesa libglu1-mesa-dev binutils-dev
+
 #libgl1-mesa-glx
 #
 sudo aptitude -y install vim kate samba system-config-samba gimp \
@@ -40,6 +41,7 @@ sudo aptitude -y install vim kate samba system-config-samba gimp \
 	gdebi gtk-recordmydesktop kfind p7zip-full p7zip-rar rar unrar lzop \
 	libwebkit-dev libwebkitgtk-dev  libwebkitgtk-3.0-dev
 sudo aptitude -y install vim-gnome vim-gtk jedit emacs lyx
+
 #openCV
 sudo aptitude -y install ant libavformat-dev libswscale-dev libgtk2.0-dev libgtk-3-0 libgtk-3-dev \
   libjpeg-dev libpng-dev libtiff-dev libjasper-dev libgtkgl2.0-dev libgtkglext1 libgtkglext1-dev \
@@ -75,6 +77,10 @@ sudo python3 setup.py install
 sudo pip uninstall Pillow
 #or pip uninstall PIL
 sudo pip install Pillow
+
+#octave build
+sudo aptitude -y install f2c gfortran libblas-dev liblapack-dev
+sudo aptitude -y install libpcre3-dev libreadline-dev
 
 ############################################
 #acrobat, ebook reader
@@ -146,10 +152,13 @@ sudo add-apt-repository -y ppa:takluyver/python3
 sudo aptitude -y update
 sudo aptitude -y install python3-matplotlib
 
+#libamd2.3.1
+#https://packages.debian.org/sid/amd64/libamd2.3.1/download
 #octave
+#Most recent octave : https://launchpad.net/ubuntu/+source/octave
 sudo add-apt-repository -y ppa:octave/stable
 sudo aptitude -y update
-sudo aptitude -y install octave liboctave-dev
+sudo aptitude -y install octave liboctave-dev octave-info
 
 #eigen
 #deb http://ppa.launchpad.net/kalakris/eigen/ubuntu precise main
