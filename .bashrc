@@ -105,6 +105,4 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-PATH=~/bin:$PATH
-export USE_CCACHE=1
-alias gmake='make ARCH=arm CROSS_COMPILE=arm-eabi-'
+PATH=~/bin:~/cmake-3.2.1/bin:$PATH
