@@ -179,6 +179,12 @@ sudo aptitude -y update
 sudo aptitude -y install armadillo
 
 #QT 5
+sudo apt-get build-dep libqt4-dev
+sudo apt-get install gperf bison
+#sudo apt-get install libxcb1 libxcb1-dev libx11-xcb1 libx11-xcb-dev libxcb-keysyms1 \
+#libxcb-keysyms1-dev libxcb-image0 libxcb-image0-dev libxcb-shm0 libxcb-shm0-dev \
+#libxcb-icccm4 libxcb-icccm4-dev libxcb-sync0 libxcb-sync0-dev libxcb-xfixes0-dev \
+#libxrender-dev libxcb-shape0-dev
 sudo add-apt-repository -y ppa:ubuntu-sdk-team/ppa
 sudo aptitude -y update
 #sudo aptitude -y install qtdeclarative5-dev
