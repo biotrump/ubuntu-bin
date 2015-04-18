@@ -14,9 +14,13 @@ sudo /usr/bin/software-properties-gtk
 sudo apt-get -y install aptitude
 sudo aptitude -y install synaptic
 #revision tool
-sudo aptitude -y install vim git-core gitk svn git-svn ksh openjdk-7-jdk
+sudo aptitude -y install vim git-core gitk svn git-svn ksh kate jedit
 #git config --global user.name "thomas tsai"
 #git config --global user.email thomas@biotrump.com
+
+#xubuntu
+#xubuntu-restricted-extras
+sudo aptitude -y install xubuntu-desktop  xubuntu-default-settings xubuntu-icon-theme
 
 #locale and ime, refer to /var/log/dpkg.log
 #!!!please select the main server from update manager or synpatic!!!
@@ -28,15 +32,20 @@ sudo aptitude -y install fonts-arphic-uming language-pack-gnome-zh-hans-base lan
 sudo aptitude -y install libreoffice-l10n-en-za language-pack-kde-en thunderbird-locale-en-gb \
 	libreoffice-help-en-gb hunspell-en-ca mythes-en-au kde-l10n-engb gimp-help-en \
 	libreoffice-l10n-en-gb
+
+#doxygen
+sudo aptitude -y install doxygen doxygen-doc doxygen-gui doxygen-latex
+
 #nvidia openCL
 # pyrit
 sudo aptitude -y install nvidia-opencl-dev nvidia-cuda-doc
+
 sudo aptitude -y install freeglut3-dev build-essential libx11-dev libxmu-dev \
   libxi-dev libglu1-mesa libglu1-mesa-dev binutils-dev
 
 #libgl1-mesa-glx
 #
-sudo aptitude -y install vim kate samba system-config-samba gimp \
+sudo aptitude -y install  samba system-config-samba gimp \
 	vlc guvcview krdc freerdp-x11 xrdp grdesktop meld kscope kcachegrind \
 	gdebi gtk-recordmydesktop kfind p7zip-full p7zip-rar rar unrar lzop \
 	libwebkit-dev libwebkitgtk-dev  libwebkitgtk-3.0-dev
@@ -46,7 +55,7 @@ sudo aptitude -y install vim-gnome vim-gtk jedit emacs lyx
 sudo aptitude -y install ant libavformat-dev libswscale-dev libgtk2.0-dev libgtk-3-0 libgtk-3-dev \
   libjpeg-dev libpng-dev libtiff-dev libjasper-dev libgtkgl2.0-dev libgtkglext1 libgtkglext1-dev \
   libgst-dev libgstreamer0.10-dev libgstreamermm-0.10-2 libgstreamer-plugins-base0.10-dev \
-  libv4l-dev libbz2-dev doxygen libumlib-dev matlab-support-dev libghc-gtkglext-dev libghc6-gtkglext-dev\
+  libv4l-dev libbz2-dev libumlib-dev matlab-support-dev libghc-gtkglext-dev libghc6-gtkglext-dev\
   libghc-gtkglext-doc libghc-gtkglext-prof libgtkglextmm-x11-1.2-dev python-gtkglext1 \
   libgdal1-dev python-gdal gdal-bin autoconf autoconf-doc libtool ccache
 
@@ -83,16 +92,6 @@ sudo aptitude -y install f2c gfortran libblas-dev liblapack-dev
 sudo aptitude -y install libpcre3-dev libreadline-dev
 
 ############################################
-#acrobat, ebook reader
-sudo add-apt-repository -y "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
-sudo aptitude -y update
-sudo aptitude -y install acroread fbreader
-#latex
-sudo aptitude -y install kile okular
-#xubuntu
-#xubuntu-restricted-extras
-sudo aptitude -y install xubuntu-desktop  xubuntu-default-settings xubuntu-icon-theme
-
 sudo aptitude -y install ssh smb-nat nbtscan libpam-winbind winbind
 #android
 sudo aptitude -y install git gnupg flex bison gperf build-essential \
@@ -103,6 +102,14 @@ sudo aptitude -y install git gnupg flex bison gperf build-essential \
 #http://osdf.github.io/blog/numpyscipy-with-openblas-for-ubuntu-1204.html
 sudo aptitude -y install gfortran swig rcconf dialog
 #libgl1-mesa-glx:i386
+
+#acrobat, ebook reader
+sudo add-apt-repository -y "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
+sudo aptitude -y update
+sudo aptitude -y install acroread fbreader
+#latex
+sudo aptitude -y install kile okular
+
 #=======================
 #ppa
 #=======================
@@ -120,8 +127,8 @@ sudo aptitude -y install wine
 
 #
 #sudo aptitude -y install gummy
-sudo add-apt-repository -y ppa:gummi/gummi
-sudo aptitude -y update
+#sudo add-apt-repository -y ppa:gummi/gummi
+#sudo aptitude -y update
 sudo aptitude -y install gummi
 
 #pgfplots
@@ -193,7 +200,7 @@ sudo aptitude -y update
 #alternative to this is to use the webupd8 ppa and the update-java package.
 sudo add-apt-repository -y ppa:nilarimogard/webupd8
 sudo aptitude -y update
-sudo aptitude -y install update-java
+sudo aptitude -y install openjdk-7-jdk update-java
 
 #autoconf >=2.69 for ubuntu 12.04
 #https://launchpad.net/~dns/+archive/ubuntu/gnu/+build/3647209
@@ -217,21 +224,20 @@ sudo aptitude -y install update-java
 #Update the system packages required to build by running:
 #~/chromium$ src/build/install-build-deps-android.sh
 
-#ubuntu 12.04 precise new gcc 4.7,4.8,4.9
+#ubuntu 14.04 precise new gcc 4.7,4.8,4.9
 #https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/test?field.series_filter=precise
 #http://mortenvp.com/installing-a-newer-gccg-on-ubuntu-12-04-lts/
-sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-sudo aptitude -y update
-sudo aptitude -y install gcc-4.9 g++-4.9 gcc-4.8 g++-4.8 gcc-4.7 g++-4.7 \
-	gfortran-4.9 gfortran-4.8 gfortran-4.7
-sudo update-alternatives --display gcc
+#sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+#sudo aptitude -y update
+#sudo aptitude -y install gcc-4.9 g++-4.9 gcc-4.8 g++-4.8 gcc-4.7 g++-4.7 \
+#	gfortran-4.9 gfortran-4.8 gfortran-4.7
+#sudo update-alternatives --display gcc
 #change the default gcc
 #sudo update-alternatives --config gcc
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 80 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 70 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.7
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.6
-sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.9 90
-sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.8 80
-sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.7 70
-sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.6 60
+#sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 80 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9
+#sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 70 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
+#sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.7
+#sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.9 90
+#sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.8 80
+#sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.7 70
+
