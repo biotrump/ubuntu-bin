@@ -40,7 +40,7 @@ sudo aptitude -y install doxygen doxygen-doc doxygen-gui doxygen-latex
 # pyrit
 sudo aptitude -y install nvidia-opencl-dev nvidia-cuda-doc
 
-sudo aptitude -y install freeglut3-dev build-essential libx11-dev libxmu-dev \
+sudo aptitude -y install freeglut3-dev build-essential g++ gcc gfortran libx11-dev libxmu-dev \
   libxi-dev libglu1-mesa libglu1-mesa-dev binutils-dev
 
 #libgl1-mesa-glx
