@@ -54,8 +54,9 @@ sudo aptitude -y install vim-gnome vim-gtk jedit emacs lyx
 #openCV
 sudo aptitude -y install ant libavformat-dev libswscale-dev libgtk2.0-dev libgtk-3-0 libgtk-3-dev \
   libjpeg-dev libpng-dev libtiff-dev libjasper-dev libgtkgl2.0-dev libgtkglext1 libgtkglext1-dev \
-  libgst-dev libgstreamer0.10-dev libgstreamermm-0.10-2 libgstreamer-plugins-base0.10-dev \
-  libv4l-dev libbz2-dev libumlib-dev matlab-support-dev libghc-gtkglext-dev libghc6-gtkglext-dev\
+  libgst-dev libgstreamer1.0-dev libgstreamer-0.10-dev libgstreamermm-0.10-2 \
+  libgstreamer-plugins-base1.0-dev \
+  libv4l-dev libbz2-dev libumlib-dev matlab-support-dev libghc-gtkglext-dev \
   libghc-gtkglext-doc libghc-gtkglext-prof libgtkglextmm-x11-1.2-dev python-gtkglext1 \
   libgdal1-dev python-gdal gdal-bin autoconf autoconf-doc libtool ccache
 
@@ -70,10 +71,10 @@ sudo aptitude -y install python  python-dev python-all python-numpy python-scien
 sudo aptitude -y install python3 python3-dev python3-all python3-numpy python3-scipy  python3-doc \
 	python3-examples python3-sphinx python3-setuptools
 #Pillow
-sudo aptitude -y install libtiff4-dev libjpeg-dev libjpeg8-dev zlib1g-dev \
-libfreetype6-dev liblcms2-dev libwebp-dev tcl8.5-dev tk8.5-dev python-tk
+sudo aptitude -y install libtiff4-dev libtiff5-dev libjpeg-dev libjpeg8-dev zlib1g-dev \
+libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk
+
 sudo easy_install3 pip
-sudo aptitude -y install python3-dev
 wget https://github.com/python-imaging/Pillow/archive/master.zip
 mkdir pil
 mv master.zip pil
@@ -106,9 +107,19 @@ sudo aptitude -y install gfortran swig rcconf dialog
 #acrobat, ebook reader
 sudo add-apt-repository -y "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
 sudo aptitude -y update
-sudo aptitude -y install acroread fbreader
+sudo aptitude -y install fbreader
 #latex
 sudo aptitude -y install kile okular
+
+#QT 5
+sudo apt-get build-dep libqt4-dev
+sudo apt-get install gperf bison
+
+#Boost C++
+#sudo add-apt-repository -y ppa:boost-latest/ppa
+#sudo aptitude -y update
+sudo aptitude -y install boost libboost_serialization1.55-dev libboost_filesystem1.55-dev \
+libboost_thread.1.55-dev libboost-program-options1.55-dev
 
 #=======================
 #ppa
@@ -155,8 +166,8 @@ sudo aptitude -y install libchewing scim-chewing
 #python3-matplotlib
 #deb http://ppa.launchpad.net/takluyver/python3/ubuntu precise main
 #deb-src http://ppa.launchpad.net/takluyver/python3/ubuntu precise main
-sudo add-apt-repository -y ppa:takluyver/python3
-sudo aptitude -y update
+#sudo add-apt-repository -y ppa:takluyver/python3
+#sudo aptitude -y update
 sudo aptitude -y install python3-matplotlib
 
 #libamd2.3.1
@@ -174,20 +185,11 @@ sudo add-apt-repository -y ppa:kalakris/eigen
 sudo aptitude -y update
 sudo aptitude -y install libeigen3-dev libeigen3-dev:i386 libeigen3-doc
 
-#Boost C++
-sudo add-apt-repository -y ppa:boost-latest/ppa
-sudo aptitude -y update
-sudo aptitude -y install boost libboost_serialization1.55-dev libboost_filesystem1.55-dev \
-libboost_thread.1.55-dev libboost-program-options1.55-dev
-
 #armadillo
 sudo add-apt-repository -y ppa:comp-phys/stable
 sudo aptitude -y update
 sudo aptitude -y install armadillo
 
-#QT 5
-sudo apt-get build-dep libqt4-dev
-sudo apt-get install gperf bison
 #sudo apt-get install libxcb1 libxcb1-dev libx11-xcb1 libx11-xcb-dev libxcb-keysyms1 \
 #libxcb-keysyms1-dev libxcb-image0 libxcb-image0-dev libxcb-shm0 libxcb-shm0-dev \
 #libxcb-icccm4 libxcb-icccm4-dev libxcb-sync0 libxcb-sync0-dev libxcb-xfixes0-dev \
