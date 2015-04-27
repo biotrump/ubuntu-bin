@@ -36,9 +36,12 @@ sudo aptitude -y install libreoffice-l10n-en-za language-pack-kde-en thunderbird
 #doxygen
 sudo aptitude -y install doxygen doxygen-doc doxygen-gui doxygen-latex
 
+sudo aptitude -y automake1.11 autoconf
+
 #nvidia openCL
 # pyrit
 sudo aptitude -y install nvidia-opencl-dev nvidia-cuda-doc
+
 
 sudo aptitude -y install freeglut3-dev build-essential g++ gcc gfortran libx11-dev libxmu-dev \
   libxi-dev libglu1-mesa libglu1-mesa-dev binutils-dev
@@ -96,9 +99,11 @@ sudo aptitude -y install libpcre3-dev libreadline-dev
 sudo aptitude -y install ssh smb-nat nbtscan libpam-winbind winbind
 #android
 sudo aptitude -y install git gnupg flex bison gperf build-essential \
-  zip curl libc6-dev libncurses5-dev:i386 x11proto-core-dev \
-  libx11-dev:i386 libreadline6-dev:i386 g++-multilib mingw32 tofrodos \
-  python-markdown libxml2-utils xsltproc zlib1g-dev:i386 libgl1-mesa-dev
+  zip curl libc6-dev  x11proto-core-dev g++-multilib mingw32 tofrodos \
+  python-markdown libxml2-utils xsltproc libgl1-mesa-dev \
+  libx11-dev:i386 libncurses5-dev:i386 libreadline6-dev:i386  \
+  zlib1g-dev:i386
+
 #ATLAS, OpenBLAS
 #http://osdf.github.io/blog/numpyscipy-with-openblas-for-ubuntu-1204.html
 sudo aptitude -y install gfortran swig rcconf dialog
@@ -204,13 +209,18 @@ sudo add-apt-repository -y ppa:nilarimogard/webupd8
 sudo aptitude -y update
 sudo aptitude -y install openjdk-7-jdk update-java
 
+#grub customizer
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+sudo aptitude -y update
+sudo aptitude -y install grub-customizer
+
 #autoconf >=2.69 for ubuntu 12.04
 #https://launchpad.net/~dns/+archive/ubuntu/gnu/+build/3647209
 #sudo add-apt-repository -y ppa:costamagnagianfranco/autoconf
 #sudo aptitude -y update
 #sudo aptitude -y install autoconf
 
-#automake 1.14 for ubuntu12.04
+#automake 1.14
 #http://packages.ubuntu.com/en/trusty/all/automake/download
 #
 #android chromium_org webkit build necessary

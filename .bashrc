@@ -105,4 +105,4 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-PATH=~/bin:~/cmake-3.2.1/bin:$PATH
+PATH=~/bin:~/cmake-3.2.2/bin:$PATH
