@@ -41,7 +41,15 @@ sudo aptitude -y automake1.11 autoconf
 #nvidia openCL
 # pyrit
 sudo aptitude -y install nvidia-opencl-dev nvidia-cuda-doc
-
+#nvidia driver, acer s3 735M
+#http://www.bleepingcomputer.com/forums/t/549534/nvidia-drivers-how-to-install-it-in-ubuntu-14041204/
+sudo add-apt-repository -y ppa:xorg-edgers/ppa
+sudo apt-get update
+sudo apt-get install nvidia-346 nvidia-settings
+#purge ppa
+#sudo apt-get install ppa-purge && sudo ppa-purge ppa:xorg-edgers/ppa
+#remove
+#sudo apt-get remove nvidia-346
 
 sudo aptitude -y install freeglut3-dev build-essential g++ gcc gfortran libx11-dev libxmu-dev \
   libxi-dev libglu1-mesa libglu1-mesa-dev binutils-dev
@@ -126,6 +134,8 @@ sudo apt-get install gperf bison
 sudo aptitude -y install boost libboost_serialization1.55-dev libboost_filesystem1.55-dev \
 libboost_thread.1.55-dev libboost-program-options1.55-dev
 
+#build NDK toolchain from source build
+sudo aptitude -y install libppl-dev ppl-dev
 #=======================
 #ppa
 #=======================
