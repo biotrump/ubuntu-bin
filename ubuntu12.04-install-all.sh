@@ -103,6 +103,9 @@ sudo aptitude -y install git gnupg flex bison gperf build-essential \
 #http://osdf.github.io/blog/numpyscipy-with-openblas-for-ubuntu-1204.html
 sudo aptitude -y install gfortran swig rcconf dialog
 #libgl1-mesa-glx:i386
+
+#android studio virtual machine
+sudo aptitude -y kvm
 #=======================
 #ppa
 #=======================

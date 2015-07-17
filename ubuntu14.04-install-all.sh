@@ -95,6 +95,8 @@ sudo pip install Pillow
 sudo aptitude -y install f2c gfortran libblas-dev liblapack-dev
 sudo aptitude -y install libpcre3-dev libreadline-dev
 
+#android studio virtual machine
+sudo aptitude -y kvm
 ############################################
 sudo aptitude -y install ssh smb-nat nbtscan libpam-winbind winbind
 #android
