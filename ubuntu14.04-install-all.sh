@@ -103,6 +103,10 @@ sudo pip install Pillow
 sudo aptitude -y install f2c gfortran libblas-dev liblapack-dev
 sudo aptitude -y install libpcre3-dev libreadline-dev
 
+#guvcview
+sudo aptitude -y install intltool libjack0 libudev-dev python-pyudev python3-pyudev libusb-1.0-0-dev \
+libusb-dev libsdl1.2-dev ffmpeg gsl-bin libgsl0-dev octave-gsl libportaudio-dev
+
 #android studio virtual machine
 sudo aptitude -y kvm
 ############################################
@@ -225,6 +229,11 @@ sudo aptitude -y install openjdk-7-jdk update-java
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 sudo aptitude -y update
 sudo aptitude -y install grub-customizer
+
+#guvcview
+sudo add-apt-repository -y ppa:zoogie/sdl2-snapshots
+sudo aptitude -y update
+sudo aptitude -y install libsdl2 libsdl2-dev
 
 #autoconf >=2.69 for ubuntu 12.04
 #https://launchpad.net/~dns/+archive/ubuntu/gnu/+build/3647209

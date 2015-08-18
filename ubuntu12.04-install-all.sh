@@ -34,6 +34,11 @@ sudo aptitude -y install nvidia-opencl-dev nvidia-cuda-doc
 sudo aptitude -y install freeglut3-dev build-essential libx11-dev libxmu-dev \
   libxi-dev libglu1-mesa libglu1-mesa-dev binutils-dev
 
+#guvcview
+sudo aptitude -y install intltool libjack0 libudev-dev python-pyudev python3-pyudev libusb-1.0-0-dev \
+libusb-dev libsdl1.2-dev ffmpeg gsl-bin libgsl0-dev octave-gsl libportaudio-dev
+
+
 #libgl1-mesa-glx
 #
 sudo aptitude -y install vim kate samba system-config-samba gimp \
@@ -197,6 +202,11 @@ sudo aptitude -y update
 sudo add-apt-repository -y ppa:nilarimogard/webupd8
 sudo aptitude -y update
 sudo aptitude -y install update-java
+
+#guvcview
+sudo add-apt-repository -y ppa:zoogie/sdl2-snapshots
+sudo aptitude -y update
+sudo aptitude -y install libsdl2 libsdl2-dev
 
 #autoconf >=2.69 for ubuntu 12.04
 #https://launchpad.net/~dns/+archive/ubuntu/gnu/+build/3647209
