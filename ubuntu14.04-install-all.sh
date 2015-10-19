@@ -14,7 +14,7 @@ sudo /usr/bin/software-properties-gtk
 sudo apt-get -y install aptitude
 sudo aptitude -y install synaptic
 #revision tool
-sudo aptitude -y install vim git-core gitk svn git-svn ksh kate jedit
+sudo aptitude -y install vim git-core gitk svn git-svn ksh kate okteta jedit
 #git config --global user.name "thomas tsai"
 #git config --global user.email thomas@biotrump.com
 
@@ -43,9 +43,12 @@ sudo aptitude -y automake1.11 autoconf
 sudo aptitude -y install nvidia-opencl-dev nvidia-cuda-doc
 #nvidia driver, acer s3 735M
 #http://www.bleepingcomputer.com/forums/t/549534/nvidia-drivers-how-to-install-it-in-ubuntu-14041204/
-sudo add-apt-repository -y ppa:xorg-edgers/ppa
+#sudo add-apt-repository -y ppa:xorg-edgers/ppa
+#https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa?field.series_filter=trusty
+#Proprietary GPU Drivers
+sudo add-apt-repository -y ppa:graphics-drivers/ppa
 sudo apt-get update
-sudo apt-get install nvidia-346 nvidia-settings
+#sudo apt-get install nvidia-346 nvidia-settings
 #purge ppa
 #sudo apt-get install ppa-purge && sudo ppa-purge ppa:xorg-edgers/ppa
 #remove
@@ -105,7 +108,7 @@ sudo aptitude -y install libpcre3-dev libreadline-dev
 
 #guvcview
 sudo aptitude -y install intltool libjack0 libudev-dev python-pyudev python3-pyudev libusb-1.0-0-dev \
-libusb-dev libsdl1.2-dev ffmpeg gsl-bin libgsl0-dev octave-gsl libportaudio-dev
+libusb-dev libsdl2-dev ffmpeg gsl-bin libgsl0-dev octave-gsl portaudio19-dev
 
 #android studio virtual machine
 sudo aptitude -y kvm

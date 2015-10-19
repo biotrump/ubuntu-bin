@@ -36,7 +36,7 @@ sudo aptitude -y install freeglut3-dev build-essential libx11-dev libxmu-dev \
 
 #guvcview
 sudo aptitude -y install intltool libjack0 libudev-dev python-pyudev python3-pyudev libusb-1.0-0-dev \
-libusb-dev libsdl1.2-dev ffmpeg gsl-bin libgsl0-dev octave-gsl libportaudio-dev
+libusb-dev libsdl1.2-dev ffmpeg gsl-bin libgsl0-dev octave-gsl portaudio19-dev
 
 
 #libgl1-mesa-glx
