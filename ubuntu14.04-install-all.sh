@@ -126,7 +126,11 @@ sudo aptitude -y install git gnupg flex bison gperf build-essential \
 sudo aptitude -y install gfortran swig rcconf dialog
 #libgl1-mesa-glx:i386
 
-#acrobat, ebook reader
+#acrobat
+wget -c http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb
+sudo dpkg -i AdbeRdr9.5.5-1_i386linux_enu.deb
+sudo apt-get install -f
+#ebook reader
 sudo add-apt-repository -y "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
 sudo aptitude -y update
 sudo aptitude -y install fbreader
