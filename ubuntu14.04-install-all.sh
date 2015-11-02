@@ -14,7 +14,9 @@ sudo /usr/bin/software-properties-gtk
 sudo apt-get -y install aptitude
 sudo aptitude -y install synaptic
 #revision tool
-sudo aptitude -y install vim git-core gitk svn git-svn ksh kate okteta jedit
+sudo aptitude -y install vim vim-gnome git-core gitk vim-gtk svn git-svn ksh kate okteta jedit meld
+sudo aptitude -y install emacs lyx
+
 #git config --global user.name "thomas tsai"
 #git config --global user.email thomas@biotrump.com
 
@@ -22,25 +24,6 @@ sudo aptitude -y install vim git-core gitk svn git-svn ksh kate okteta jedit
 #xubuntu-restricted-extras
 sudo aptitude -y install xubuntu-desktop  xubuntu-default-settings xubuntu-icon-theme
 
-#locale and ime, refer to /var/log/dpkg.log
-#!!!please select the main server from update manager or synpatic!!!
-sudo aptitude -y install fonts-arphic-uming language-pack-gnome-zh-hans-base language-pack-zh-hans-base \
-			language-pack-zh-hans language-pack-gnome-zh-hans language-pack-gnome-zh-hant-base \
-			language-pack-zh-hant-base language-pack-zh-hant language-pack-gnome-zh-hant \
-			libchewing3-data libchewing3 ibus-chewing ttf-wqy-zenhei ttf-arphic-ukai fonts-arphic-ukai
-#font locale
-sudo aptitude -y install libreoffice-l10n-en-za language-pack-kde-en thunderbird-locale-en-gb \
-	libreoffice-help-en-gb hunspell-en-ca mythes-en-au kde-l10n-engb gimp-help-en \
-	libreoffice-l10n-en-gb
-
-#doxygen
-sudo aptitude -y install doxygen doxygen-doc doxygen-gui doxygen-latex
-
-sudo aptitude -y automake1.11 autoconf
-
-#nvidia openCL
-# pyrit
-sudo aptitude -y install nvidia-opencl-dev nvidia-cuda-doc
 #nvidia driver, acer s3 735M
 #http://www.bleepingcomputer.com/forums/t/549534/nvidia-drivers-how-to-install-it-in-ubuntu-14041204/
 #sudo add-apt-repository -y ppa:xorg-edgers/ppa
@@ -48,44 +31,93 @@ sudo aptitude -y install nvidia-opencl-dev nvidia-cuda-doc
 #Proprietary GPU Drivers
 sudo add-apt-repository -y ppa:graphics-drivers/ppa
 sudo apt-get update
+
 #sudo apt-get install nvidia-346 nvidia-settings
 #purge ppa
 #sudo apt-get install ppa-purge && sudo ppa-purge ppa:xorg-edgers/ppa
-#remove
-#sudo apt-get remove nvidia-346
 
-sudo aptitude -y install freeglut3-dev build-essential g++ gcc gfortran libx11-dev libxmu-dev \
-  libxi-dev libglu1-mesa libglu1-mesa-dev binutils-dev
+#nvidia openCL
+# pyrit
+#sudo aptitude -y install nvidia-opencl-dev nvidia-cuda-doc
 
-#libgl1-mesa-glx
-#
-sudo aptitude -y install  samba system-config-samba gimp \
-	vlc guvcview krdc freerdp-x11 xrdp grdesktop meld kscope kcachegrind \
-	gdebi gtk-recordmydesktop kfind p7zip-full p7zip-rar rar unrar lzop \
-	libwebkit-dev libwebkitgtk-dev  libwebkitgtk-3.0-dev
-sudo aptitude -y install vim-gnome vim-gtk jedit emacs lyx
+#doxygen
+sudo aptitude -y install doxygen doxygen-doc doxygen-gui doxygen-latex
 
-#openCV
-sudo aptitude -y install ant libavformat-dev libswscale-dev libgtk2.0-dev libgtk-3-0 libgtk-3-dev \
-  libjpeg-dev libpng-dev libtiff-dev libjasper-dev libgtkgl2.0-dev libgtkglext1 libgtkglext1-dev \
-  libgst-dev libgstreamer1.0-dev libgstreamer-0.10-dev libgstreamermm-0.10-2 \
-  libgstreamer-plugins-base1.0-dev \
-  libv4l-dev libbz2-dev libumlib-dev matlab-support-dev libghc-gtkglext-dev \
-  libghc-gtkglext-doc libghc-gtkglext-prof libgtkglextmm-x11-1.2-dev python-gtkglext1 \
-  libgdal1-dev python-gdal gdal-bin autoconf autoconf-doc libtool ccache
+sudo aptitude -y automake1.11 autoconf
 
-sudo aptitude -y install kwalletmanager maxima wxmaxima xmaxima cutecom \
-  minicom cpufrequtils indicator-cpufreq sysfsutils
+sudo aptitude -y install ssh smb-nat nbtscan libpam-winbind winbind
 
 #python2
 sudo aptitude -y install python  python-dev python-all python-numpy python-scientific python-tables \
 	python-scipy python-matplotlib python-scitools python-mpmath python-doc \
-	python-imaging-tk python-examples python-sphinx python-setuptools
+	python-imaging-tk python-examples python-sphinx python-setuptools \
+	python-gdal python-gtkglext1 python-gtkglext1 \ 
+
 #python3
 sudo aptitude -y install python3 python3-dev python3-all python3-numpy python3-scipy  python3-doc \
-	python3-examples python3-sphinx python3-setuptools
+	python3-examples python3-sphinx python3-setuptools python3-matplotlib
+
+#samba
+sudo aptitude -y install  samba system-config-samba 
+
+#draw, camera
+sudo aptitude -y install gimp vlc guvcview krdc freerdp-x11 xrdp grdesktop kscope kcachegrind \
+	gdebi gtk-recordmydesktop
+sudo aptitude -y install kfind p7zip-full p7zip-rar rar unrar lzop libbz2-dev
+
+#latex
+sudo aptitude -y install kile gummi okular
+
+#QT 5
+sudo aptitude -y install qt5-default qt5-doc qt5-doc-html qt5-image-formats-plugins
+
+#=================================================
+#locale and ime, refer to /var/log/dpkg.log
+#!!!please select the main server from update manager or synpatic!!!
+#sudo aptitude -y install fonts-arphic-uming language-pack-gnome-zh-hans-base language-pack-zh-hans-base \
+#			language-pack-zh-hans language-pack-gnome-zh-hans language-pack-gnome-zh-hant-base \
+#			language-pack-zh-hant-base language-pack-zh-hant language-pack-gnome-zh-hant \
+#			libchewing3-data libchewing3 ibus-chewing ttf-wqy-zenhei ttf-arphic-ukai fonts-arphic-ukai
+#font locale
+#sudo aptitude -y install libreoffice-l10n-en-za language-pack-kde-en thunderbird-locale-en-gb \
+#	libreoffice-help-en-gb hunspell-en-ca mythes-en-au kde-l10n-engb gimp-help-en \
+#	libreoffice-l10n-en-gb
+#
+
+sudo aptitude -y install libv4l-dev libtool 
+libsdl2-dev libsdl2-ttf-dev libsdl2-gfx-dev libsdl2-mixer-dev vlc-plugin-sdl
+sudo aptitude -y install libjpeg-dev libpng-dev libtiff-dev libjasper-dev
+sudo aptitude -y install libavcodec libgst-dev libgstreamer1.0-dev libavformat-dev \
+	libswscale-dev libgstreamer-plugins-base1.0-dev libgstreamermm-0.10-dev
+
+sudo aptitude -y install libgtk-3-dev
+
+sudo aptitude -y install freeglut3-dev libx11-dev libxmu-dev \
+  libxi-dev libglu1-mesa libglu1-mesa-dev binutils-dev
+
+sudo aptitude -y install libwebkit-dev libwebkitgtk-dev  libwebkitgtk-3.0-dev
+
+#openCV
+#libgstreamer-0.10-dev libgstreamermm-0.10-2 \
+
+#sudo aptitude -y install ant  libgtk2.0-dev libgtk-3-0  \
+#  libgtkgl2.0-dev libgtkglext1 libgtkglext1-dev \
+#  libumlib-dev matlab-support-dev libghc-gtkglext-dev \
+#  libghc-gtkglext-doc libghc-gtkglext-prof libgtkglextmm-x11-1.2-dev  \
+#  libgdal1-dev  gdal-bin autoconf-doc ccache
+
+sudo aptitude -y install kwalletmanager maxima wxmaxima xmaxima maxima-doc maxima-emacs
+
+sudo aptitude -y install cutecom minicom cpufrequtils indicator-cpufreq sysfsutils libsysfs2
+
+#guvcview
+#libportaudio-dev ffmpeg
+sudo aptitude -y install libjack0 libjack-dev portaudio19-dev
+sudo aptitude -y install intltool libudev-dev libusb-1.0-0-dev \
+libusb-dev gsl-bin libgsl0-dev python3-pyudev python-pyudev
+
 #Pillow
-sudo aptitude -y install libtiff4-dev libtiff5-dev libjpeg-dev libjpeg8-dev zlib1g-dev \
+#sudo aptitude -y install libtiff4-dev libtiff5-dev libjpeg-dev libjpeg8-dev zlib1g-dev \
 libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk
 
 sudo easy_install3 pip
@@ -107,18 +139,17 @@ sudo aptitude -y install f2c gfortran libblas-dev liblapack-dev
 sudo aptitude -y install libpcre3-dev libreadline-dev
 
 #guvcview
-sudo aptitude -y install intltool libjack0 libudev-dev python-pyudev python3-pyudev libusb-1.0-0-dev \
-libusb-dev libsdl2-dev ffmpeg gsl-bin libgsl0-dev octave-gsl portaudio19-dev \
-libsdl-ttf2.0-dev libsdl2-ttf libsdl2-ttf-dev
+sudo aptitude -y install intltool libjack0 libudev-dev python-pyudev python3-pyudev \
+	libusb-1.0-0-dev libusb-dev libsdl2-dev ffmpeg gsl-bin libgsl0-dev octave-gsl \
+	portaudio19-dev libsdl-ttf2.0-dev libsdl2-ttf libsdl2-ttf-dev
 
 #android studio virtual machine
 sudo aptitude -y kvm
-############################################
-sudo aptitude -y install ssh smb-nat nbtscan libpam-winbind winbind
+
 #android
 sudo aptitude -y install ninja gnupg flex bison gperf build-essential \
   zip curl libc6-dev  x11proto-core-dev g++-multilib mingw32 tofrodos \
-  python-markdown libxml2-utils xsltproc libgl1-mesa-dev \
+	python-markdown libxml2-utils xsltproc libgl1-mesa-dev \
   libx11-dev:i386 libncurses5-dev:i386 libreadline6-dev:i386  \
   zlib1g-dev:i386
 
@@ -135,8 +166,6 @@ sudo apt-get install -f
 sudo add-apt-repository -y "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
 sudo aptitude -y update
 sudo aptitude -y install fbreader
-#latex
-sudo aptitude -y install kile okular
 
 #QT 5
 sudo apt-get build-dep libqt4-dev qt5-default qt5-doc qt5-doc-html qtchooser \
@@ -147,7 +176,7 @@ sudo apt-get install gperf bison
 #Boost C++
 #sudo add-apt-repository -y ppa:boost-latest/ppa
 #sudo aptitude -y update
-sudo aptitude -y install boost libboost_serialization1.55-dev libboost_filesystem1.55-dev \
+sudo aptitude -y install libboost_serialization1.55-dev libboost_filesystem1.55-dev \
 libboost_thread.1.55-dev libboost-program-options1.55-dev
 
 #build NDK toolchain from source build
@@ -155,10 +184,10 @@ sudo aptitude -y install libppl-dev ppl-dev
 #=======================
 #ppa
 #=======================
-sudo add-apt-repository -y ppa:yannubuntu/boot-repair
+#sudo add-apt-repository -y ppa:yannubuntu/boot-repair
 #sudo apt-get update
-sudo aptitude -y update
-sudo aptitude -y install boot-repair
+#sudo aptitude -y update
+#sudo aptitude -y install boot-repair
 
 #wine
 #deb http://ppa.launchpad.net/ubuntu-wine/ppa/ubuntu YOUR_UBUNTU_VERSION_HERE main
@@ -171,7 +200,7 @@ sudo aptitude -y install wine
 #sudo aptitude -y install gummy
 #sudo add-apt-repository -y ppa:gummi/gummi
 #sudo aptitude -y update
-sudo aptitude -y install gummi
+#sudo aptitude -y install gummi
 
 #pgfplots
 #sudo add-apt-repository -y ppa:texlive-backports/ppa
@@ -199,7 +228,7 @@ sudo aptitude -y install gummi
 #deb-src http://ppa.launchpad.net/takluyver/python3/ubuntu precise main
 #sudo add-apt-repository -y ppa:takluyver/python3
 #sudo aptitude -y update
-sudo aptitude -y install python3-matplotlib
+#sudo aptitude -y install python3-matplotlib
 
 #libamd2.3.1
 #https://packages.debian.org/sid/amd64/libamd2.3.1/download
@@ -207,7 +236,10 @@ sudo aptitude -y install python3-matplotlib
 #Most recent octave : https://launchpad.net/ubuntu/+source/octave
 sudo add-apt-repository -y ppa:octave/stable
 sudo aptitude -y update
-sudo aptitude -y install octave liboctave-dev octave-info
+sudo aptitude -y install octave liboctave-dev octave-info  octave-control octave-doc \
+octave-general octave-signal octave-plot octave-info octave-image octave-benchmark
+#octave-openmpi-ext octave-io octave-miscellaneous octave-linear-algebra  o
+#octave-gsl
 
 #eigen
 #deb http://ppa.launchpad.net/kalakris/eigen/ubuntu precise main
@@ -225,25 +257,25 @@ sudo aptitude -y install octave liboctave-dev octave-info
 #libxcb-keysyms1-dev libxcb-image0 libxcb-image0-dev libxcb-shm0 libxcb-shm0-dev \
 #libxcb-icccm4 libxcb-icccm4-dev libxcb-sync0 libxcb-sync0-dev libxcb-xfixes0-dev \
 #libxrender-dev libxcb-shape0-dev
-sudo add-apt-repository -y ppa:ubuntu-sdk-team/ppa
-sudo aptitude -y update
+#sudo add-apt-repository -y ppa:ubuntu-sdk-team/ppa
+#sudo aptitude -y update
 #sudo aptitude -y install qtdeclarative5-dev
 
 #ppa:nilarimogard/webupd8
 #alternative to this is to use the webupd8 ppa and the update-java package.
-sudo add-apt-repository -y ppa:nilarimogard/webupd8
-sudo aptitude -y update
+#sudo add-apt-repository -y ppa:nilarimogard/webupd8
+#sudo aptitude -y update
 sudo aptitude -y install openjdk-7-jdk update-java
 
 #grub customizer
-sudo add-apt-repository ppa:danielrichter2007/grub-customizer
-sudo aptitude -y update
-sudo aptitude -y install grub-customizer
+#sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+#sudo aptitude -y update
+#sudo aptitude -y install grub-customizer
 
 #guvcview
-sudo add-apt-repository -y ppa:zoogie/sdl2-snapshots
-sudo aptitude -y update
-sudo aptitude -y install libsdl2 libsdl2-dev
+#sudo add-apt-repository -y ppa:zoogie/sdl2-snapshots
+#sudo aptitude -y update
+#sudo aptitude -y install libsdl2 libsdl2-dev
 
 #autoconf >=2.69 for ubuntu 12.04
 #https://launchpad.net/~dns/+archive/ubuntu/gnu/+build/3647209
