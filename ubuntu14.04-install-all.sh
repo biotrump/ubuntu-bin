@@ -91,8 +91,9 @@ sudo aptitude -y install qt5-default qt5-doc qt5-doc-html qt5-image-formats-plug
 sudo aptitude -y install libv4l-dev libtool
 libsdl2-dev libsdl2-ttf-dev libsdl2-gfx-dev libsdl2-mixer-dev vlc-plugin-sdl
 sudo aptitude -y install libjpeg-dev libpng-dev libtiff-dev libjasper-dev
-sudo aptitude -y install libavcodec libgst-dev libgstreamer1.0-dev libavformat-dev libswscale-dev \
-	libgstreamer-plugins-base1.0-dev libgstreamermm-0.10-dev \
+sudo aptitude -y install libavcodec libgst-dev libgstreamer1.0-dev libavformat-dev \
+	libswscale-dev libgstreamer-plugins-base1.0-dev libgstreamermm-0.10-dev
+
 sudo aptitude -y install libgtk-3-dev
 
 sudo aptitude -y install freeglut3-dev libx11-dev libxmu-dev \
@@ -138,16 +139,21 @@ sudo pip uninstall Pillow
 sudo pip install Pillow
 
 #octave build
-#sudo aptitude -y install f2c libblas-dev liblapack-dev
-sudo aptitude -y install libreadline-dev
+sudo aptitude -y install f2c gfortran libblas-dev liblapack-dev
+sudo aptitude -y install libpcre3-dev libreadline-dev
+
+#guvcview
+sudo aptitude -y install intltool libjack0 libudev-dev python-pyudev python3-pyudev \
+	libusb-1.0-0-dev libusb-dev libsdl2-dev ffmpeg gsl-bin libgsl0-dev octave-gsl \
+	portaudio19-dev libsdl-ttf2.0-dev libsdl2-ttf libsdl2-ttf-dev
 
 #android studio virtual machine
 sudo aptitude -y kvm
 
 #android
-sudo aptitude -y install git gnupg flex bison gperf g++ gcc build-essential \
-  zip libc6-dev  x11proto-core-dev g++-multilib mingw32 tofrodos \
-  python-markdown libxml2-utils xsltproc libgl1-mesa-dev \
+sudo aptitude -y install ninja gnupg flex bison gperf build-essential \
+  zip curl libc6-dev  x11proto-core-dev g++-multilib mingw32 tofrodos \
+	python-markdown libxml2-utils xsltproc libgl1-mesa-dev \
   libx11-dev:i386 libncurses5-dev:i386 libreadline6-dev:i386  \
   zlib1g-dev:i386
 
@@ -166,8 +172,10 @@ sudo aptitude -y update
 sudo aptitude -y install fbreader
 
 #QT 5
-#sudo apt-get build-dep libqt4-dev
-#sudo apt-get install gperf bison
+sudo apt-get build-dep libqt4-dev qt5-default qt5-doc qt5-doc-html qtchooser \
+	qt5-image-formats-plugins appmenu-qt5 qtmultimedia5-examples
+#
+sudo apt-get install gperf bison
 
 #Boost C++
 #sudo add-apt-repository -y ppa:boost-latest/ppa
@@ -201,7 +209,7 @@ sudo aptitude -y install wine
 #pgfplots
 #sudo add-apt-repository -y ppa:texlive-backports/ppa
 #sudo aptitude -y update
-sudo aptitude -y install texlive texlive-fonts-extras
+#sudo aptitude -y install texlive texlive-fonts-extras
 
 #cmake
 #deb http://ppa.launchpad.net/kalakris/cmake/ubuntu precise main
@@ -303,16 +311,16 @@ sudo aptitude -y install kate
 #ubuntu 14.04 precise new gcc 4.7,4.8,4.9
 #https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/test?field.series_filter=precise
 #http://mortenvp.com/installing-a-newer-gccg-on-ubuntu-12-04-lts/
-#sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-#sudo aptitude -y update
-#sudo aptitude -y install gcc-4.9 g++-4.9 gcc-4.8 g++-4.8 gcc-4.7 g++-4.7 \
-#	gfortran-4.9 gfortran-4.8 gfortran-4.7
-#sudo update-alternatives --display gcc
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+#sudo add-apt-repository -y ppa:ubuntu-toolchain-r/ppa 
+sudo aptitude -y update
+sudo aptitude -y install gcc-4.9 g++-4.9 gfortran-4.9
+sudo update-alternatives --display gcc
 #change the default gcc
-#sudo update-alternatives --config gcc
-#sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 80 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9
-#sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 70 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
+sudo update-alternatives --config gcc
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 80 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 70 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
 #sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.7
-#sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.9 90
-#sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.8 80
+sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.9 80
+sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.8 70
 #sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.7 70
