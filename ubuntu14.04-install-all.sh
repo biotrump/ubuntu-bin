@@ -13,6 +13,10 @@ sudo /usr/bin/software-properties-gtk
 
 sudo apt-get -y install aptitude
 sudo aptitude -y install synaptic
+
+#https://github.com/servo/saltfs/issues/280
+#sudo apt-get -o Dpkg::Options::="--force-overwrite" install -f
+
 #revision tool
 sudo aptitude -y install vim vim-gnome git-core gitk vim-gtk svn git-svn ksh kate okteta jedit meld
 sudo aptitude -y install emacs lyx
@@ -52,14 +56,14 @@ sudo aptitude -y install ssh smb-nat nbtscan libpam-winbind winbind
 sudo aptitude -y install python  python-dev python-all python-numpy python-scientific python-tables \
 	python-scipy python-matplotlib python-scitools python-mpmath python-doc \
 	python-imaging-tk python-examples python-sphinx python-setuptools \
-	python-gdal python-gtkglext1 python-gtkglext1 \ 
+	python-gdal python-gtkglext1 python-gtkglext1 \
 
 #python3
 sudo aptitude -y install python3 python3-dev python3-all python3-numpy python3-scipy  python3-doc \
 	python3-examples python3-sphinx python3-setuptools python3-matplotlib
 
 #samba
-sudo aptitude -y install  samba system-config-samba 
+sudo aptitude -y install  samba system-config-samba
 
 #draw, camera
 sudo aptitude -y install gimp vlc guvcview krdc freerdp-x11 xrdp grdesktop kscope kcachegrind \
@@ -85,7 +89,7 @@ sudo aptitude -y install qt5-default qt5-doc qt5-doc-html qt5-image-formats-plug
 #	libreoffice-l10n-en-gb
 #
 
-sudo aptitude -y install libv4l-dev libtool 
+sudo aptitude -y install libv4l-dev libtool
 libsdl2-dev libsdl2-ttf-dev libsdl2-gfx-dev libsdl2-mixer-dev vlc-plugin-sdl
 sudo aptitude -y install libjpeg-dev libpng-dev libtiff-dev libjasper-dev
 sudo aptitude -y install libavcodec libgst-dev libgstreamer1.0-dev libavformat-dev \
@@ -268,6 +272,11 @@ octave-general octave-signal octave-plot octave-info octave-image octave-benchma
 #sudo aptitude -y update
 sudo aptitude -y install openjdk-7-jdk update-java
 
+#kate editor
+sudo add-apt-repository ppa:kubuntu-ppa/backports
+sudo aptitude -y update
+sudo aptitude -y install kate
+
 #grub customizer
 #sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 #sudo aptitude -y update
@@ -316,4 +325,3 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 70 --slave 
 sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.9 80
 sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.8 70
 #sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-4.7 70
-
