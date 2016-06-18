@@ -38,7 +38,8 @@ sudo apt-get update
 
 #nvidia openCL
 # pyrit
-#sudo aptitude -y install nvidia-opencl-dev nvidia-cuda-doc
+sudo aptitude -y install libcuda1-352-updates nvidia-352-updates \
+nvidia-opencl-icd-352-updates nvidia-settings xserver-xorg-video-nouveau-lts-wilyd
 
 #doxygen
 sudo aptitude -y install doxygen doxygen-doc doxygen-gui doxygen-latex
