@@ -278,9 +278,9 @@ sudo aptitude -y update
 sudo aptitude -y install kate
 
 #grub customizer
-#sudo add-apt-repository ppa:danielrichter2007/grub-customizer
-#sudo aptitude -y update
-#sudo aptitude -y install grub-customizer
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+sudo aptitude -y update
+sudo aptitude -y install grub-customizer
 
 #guvcview
 #sudo add-apt-repository -y ppa:zoogie/sdl2-snapshots
