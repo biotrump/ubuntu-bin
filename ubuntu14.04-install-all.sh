@@ -36,19 +36,24 @@ sudo aptitude -y install xubuntu-desktop  xubuntu-default-settings xubuntu-icon-
 sudo add-apt-repository -y ppa:graphics-drivers/ppa
 sudo apt-get update
 
-#sudo apt-get install nvidia-346 nvidia-settings
+#find the best driver for nvidia
+#sudo ubuntu-drivers devices
+sudo apt-get install nvidia-367 nvidia-settings
+#purge sudo apt purge nvidia-*
+#select intel/nvidia
+#sudo prime-select nvidia/intel/query
 #purge ppa
 #sudo apt-get install ppa-purge && sudo ppa-purge ppa:xorg-edgers/ppa
 
 #nvidia openCL
 # pyrit
-sudo aptitude -y install libcuda1-352-updates nvidia-352-updates \
-nvidia-opencl-icd-352-updates nvidia-settings xserver-xorg-video-nouveau-lts-wilyd
+#sudo aptitude -y install libcuda1-352-updates nvidia-352-updates \
+#nvidia-opencl-icd-352-updates nvidia-settings xserver-xorg-video-nouveau-lts-wilyd
 
 #doxygen
 sudo aptitude -y install doxygen doxygen-doc doxygen-gui doxygen-latex
 
-sudo aptitude -y automake1.11 autoconf
+sudo aptitude -y install automake autoconf
 
 sudo aptitude -y install ssh smb-nat nbtscan libpam-winbind winbind
 
@@ -160,7 +165,7 @@ sudo aptitude -y install ninja gnupg flex bison gperf build-essential \
 
 #ATLAS, OpenBLAS
 #http://osdf.github.io/blog/numpyscipy-with-openblas-for-ubuntu-1204.html
-sudo aptitude -y install gfortran swig rcconf dialog
+sudo aptitude -y install swig rcconf dialog
 #libgl1-mesa-glx:i386
 
 #acrobat
@@ -177,6 +182,8 @@ sudo apt-get build-dep libqt4-dev qt5-default qt5-doc qt5-doc-html qtchooser \
 	qt5-image-formats-plugins appmenu-qt5 qtmultimedia5-examples
 #
 sudo apt-get install gperf bison
+#google unit test
+sudo apt-get install gest
 
 #Boost C++
 #sudo add-apt-repository -y ppa:boost-latest/ppa
