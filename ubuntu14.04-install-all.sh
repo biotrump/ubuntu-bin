@@ -79,7 +79,8 @@ sudo aptitude -y install kfind p7zip-full p7zip-rar rar unrar lzop libbz2-dev
 sudo aptitude -y install kile gummi okular
 
 #QT 5
-sudo aptitude -y install qt5-default qt5-doc qt5-doc-html qt5-image-formats-plugins
+#http://askubuntu.com/questions/508503/whats-the-development-package-for-qt5-in-14-04
+sudo aptitude -y install qtbase5-dev qt5-default qtdeclarative5-dev qt5-doc qt5-doc-html qt5-image-formats-plugins
 
 #=================================================
 #locale and ime, refer to /var/log/dpkg.log
